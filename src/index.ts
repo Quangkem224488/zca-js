@@ -57,6 +57,8 @@ export type { GetBizAccountResponse } from "./apis/getBizAccount.js";
 export type { GetCatalogListPayload, GetCatalogListResponse } from "./apis/getCatalogList.js";
 export type { GetCloseFriendsResponse } from "./apis/getCloseFriends.js";
 export type { GetFriendBoardListResponse } from "./apis/getFriendBoardList.js";
+export type { PinMessageParams, PinMessageResponse } from "./apis/pinMessage.js";
+export type { UnpinMessageResponse } from "./apis/unpinMessage.js";
 export type { GetFriendOnlinesResponse, GetFriendOnlinesStatus } from "./apis/getFriendOnlines.js";
 export type { GetFriendRecommendationsResponse, FriendRecommendationsCollapseMsgListConfig, FriendRecommendationsDataInfo, FriendRecommendationsRecommItem } from "./apis/getFriendRecommendations.js";
 export type { GetFriendRequestStatusResponse } from "./apis/getFriendRequestStatus.js";

@@ -101,6 +101,7 @@ import { leaveGroupFactory } from "./apis/leaveGroup.js";
 import { lockPollFactory } from "./apis/lockPoll.js";
 import { lostFocusFactory } from "./apis/lostFocus.js";
 import { parseLinkFactory } from "./apis/parseLink.js";
+import { pinMessageFactory } from "./apis/pinMessage.js";
 import { registerCatalogFactory } from "./apis/registerCatalog.js";
 import { rejectFriendRequestFactory } from "./apis/rejectFriendRequest.js";
 import { removeFriendFactory } from "./apis/removeFriend.js";
@@ -135,6 +136,7 @@ import { sharePollFactory } from "./apis/sharePoll.js";
 import { unblockUserFactory } from "./apis/unblockUser.js";
 import { undoFactory } from "./apis/undo.js";
 import { undoFriendRequestFactory } from "./apis/undoFriendRequest.js";
+import { unpinMessageFactory } from "./apis/unpinMessage.js";
 import { updateActiveStatusFactory } from "./apis/updateActiveStatus.js";
 import { updateArchivedChatListFactory } from "./apis/updateArchivedChatList.js";
 import { updateAutoDeleteChatFactory } from "./apis/updateAutoDeleteChat.js";
@@ -262,6 +264,7 @@ export class API {
     public lockPoll: ReturnType<typeof lockPollFactory>;
     public lostFocus: ReturnType<typeof lostFocusFactory>;
     public parseLink: ReturnType<typeof parseLinkFactory>;
+    public pinMessage: ReturnType<typeof pinMessageFactory>;
     public registerCatalog: ReturnType<typeof registerCatalogFactory>;
     public rejectFriendRequest: ReturnType<typeof rejectFriendRequestFactory>;
     public removeFriend: ReturnType<typeof removeFriendFactory>;
@@ -296,6 +299,7 @@ export class API {
     public unblockUser: ReturnType<typeof unblockUserFactory>;
     public undo: ReturnType<typeof undoFactory>;
     public undoFriendRequest: ReturnType<typeof undoFriendRequestFactory>;
+    public unpinMessage: ReturnType<typeof unpinMessageFactory>;
     public updateActiveStatus: ReturnType<typeof updateActiveStatusFactory>;
     public updateArchivedChatList: ReturnType<typeof updateArchivedChatListFactory>;
     public updateAutoDeleteChat: ReturnType<typeof updateAutoDeleteChatFactory>;
@@ -423,6 +427,7 @@ export class API {
         this.lockPoll = lockPollFactory(ctx, this);
         this.lostFocus = lostFocusFactory(ctx, this);
         this.parseLink = parseLinkFactory(ctx, this);
+        this.pinMessage = pinMessageFactory(ctx, this);
         this.registerCatalog = registerCatalogFactory(ctx, this);
         this.rejectFriendRequest = rejectFriendRequestFactory(ctx, this);
         this.removeFriend = removeFriendFactory(ctx, this);
@@ -457,6 +462,7 @@ export class API {
         this.unblockUser = unblockUserFactory(ctx, this);
         this.undo = undoFactory(ctx, this);
         this.undoFriendRequest = undoFriendRequestFactory(ctx, this);
+        this.unpinMessage = unpinMessageFactory(ctx, this);
         this.updateActiveStatus = updateActiveStatusFactory(ctx, this);
         this.updateArchivedChatList = updateArchivedChatListFactory(ctx, this);
         this.updateAutoDeleteChat = updateAutoDeleteChatFactory(ctx, this);
